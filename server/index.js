@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.json({type: 'application/vnd.api+json'}))
 app.use(methodOverride());
 
-require('./server/routes')(app)
+require('./routes')(app)
 
 app.listen(3000);
 console.log("app listening on port 3000")

@@ -1,3 +1,30 @@
+body {
+  background-color: #f5f8fa;
+}
+
+.add-resource {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e6ecf0;
+  padding: 2em;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
 .navbar {
     border-radius: 0px;
+}
+
+.animate-show-hide.ng-hide {
+  opacity: 0;
+}
+
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+  transition: all linear 0.5s;
 }
