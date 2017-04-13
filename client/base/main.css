@@ -1,14 +1,23 @@
 body {
-  background-color: #f5f8fa;
-}
-
-td {
-  position: relative;
+  background-color: #e9ebee;
 }
 
 a {
   color: #222;
   cursor: pointer;
+}
+
+.container {
+  max-width: 890px;
+}
+
+.resource-item {
+  position: relative;
+  padding: .5em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
 .add-resource {
@@ -17,14 +26,21 @@ a {
   border: 1px solid #e6ecf0;
   padding: 2em;
   position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
 .tooltip-toggle {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: .5em;
+  right: .5em;
   cursor: pointer;
   z-index: 10;
+  opacity: .2;
+  transition: all .1s ease;
+}
+
+.tooltip-toggle:hover {
+  opacity: .5;
 }
 
 .modal {
@@ -34,7 +50,7 @@ a {
 .tooltip {
 	position: absolute;
 	top: 20px;
-	right: -14px;
+	right: -11px;
 	text-align: left;
 	border-radius: 6px;
   opacity: 1 !important;

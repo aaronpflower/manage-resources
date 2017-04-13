@@ -64,7 +64,7 @@
                         <button type="button" class="close" ng-click="resources.toggleDelete()">&times;</button>
                         <h4 class="modal-title">Delete Resource</h4>
                     </div>
-                        <div class="modal-body">
+                    <div class="modal-body">
                         <p>Are you sure you want to delete this resource?</p>
                     </div>
                     <div class="modal-footer">
@@ -76,32 +76,26 @@
             </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="row">
                 <h2>Tool Box</h2>
-                <a class="col-xs-12" ng-click="resources.toggleForm()"><i class="fa fa-plus" aria-hidden="true"></i> Website</a>
-                <a class="col-xs-12" ng-click="resources.toggleForm()"><i class="fa fa-plus" aria-hidden="true"></i> Books</a>
-                <a class="col-xs-12" ng-click="resources.toggleForm()"><i class="fa fa-plus" aria-hidden="true"></i> Podcasts</a>
+                <button class="btn btn-primary" ng-click="resources.toggleForm()"><i class="fa fa-plus" aria-hidden="true"></i> Add Resource</button>
             </div>
         </div>
         
 
-        <div class="col-sm-6">
+        <div class="resource-list col-sm-9">
             <h2>Resources</h2>
-            <table class="table table-striped table-bordered">
-                <tr>
-                    <th>Type</th>
-                    <th>Title</th>
-                    <th>Resource</th>
-                </tr>
-                <tr ng-repeat="item in resources.$state.resourceList track by $index">
-                    <td>{{item.type}}</td>
-                    <td>{{item.title}}</td>
-                    <td>{{item.resource}}
-                        <tooltip></tooltip>
-                    </td>
-                </tr>
-            </table>
+            <div class="resource-item row" ng-repeat="item in resources.$state.resourceList track by $index">
+                <tooltip></tooltip>
+                <div class="modal-header">
+                    <h4 class="col-xs-12">Category: {{item.type}}</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="col-xs-12">Title: {{item.title}}</p>
+                    <p class="col-xs-12">Description: {{item.resource}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>   
