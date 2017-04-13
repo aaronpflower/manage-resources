@@ -16,10 +16,12 @@ export default class ResourcesController {
 	}
 
 	toggleEdit(id, type, title, resource) {
-		this.$state.showEdit = !this.$state.showEdit;
+		this.$state.formData = {};
+		return this.$state.showEdit = !this.$state.showEdit;
 	}
 
 	toggleDelete(id) {
+		this.$state.formData = {};
 		this.$state.showDelete = !this.$state.showDelete;
 	}
 
