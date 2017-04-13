@@ -1,6 +1,9 @@
 {
   "name": "anular-example",
   "version": "1.0.0",
+  "engines": {
+    "node": "7.0.0"
+  },
   "description": "Sample Angular App for Gloo Javascript Developer Position",
   "main": "index.js",
   "scripts": {
