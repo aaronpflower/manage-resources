@@ -8,22 +8,18 @@ export default class ResourcesController {
 		this.$state.formData = {};
 		this.$state.resourceList = [];
 		this.$state.resourceId = null;
+		this.$state.statusMessage = null;
 	}
 
 	toggleForm() {
-		this.$state.showForm = !this.$state.showForm;
+		return this.$state.showForm = !this.$state.showForm;
 	}
 
 	toggleEdit(id, type, title, resource) {
-		this.$state.resourceId = id
-		this.$state.formData.type = type
-		this.$state.formData.title = title
-		this.$state.formData.resource = resource
 		this.$state.showEdit = !this.$state.showEdit;
 	}
 
 	toggleDelete(id) {
-		this.$state.resourceId = id
 		this.$state.showDelete = !this.$state.showDelete;
 	}
 
@@ -32,16 +28,17 @@ export default class ResourcesController {
 			.then(function successCallback(response) {
 				this.$state.resourceList = response.data;
 			}.bind(this), function errorCallback(response) {
-				console.log(response)
+				this.$state.statusMessage = 'Error occured'
 			})
 	}
 
 	deleteResources() {
 		return this.$http.delete('/api/resources/' + this.$state.resourceId)
 			.then(function successCallback(response) {
+				this.toggleDelete()
 				this.$state.resourceList = response.data;
 			}.bind(this), function errorCallback(response) {
-				console.log(response)
+				this.$state.statusMessage = 'Error occured'
 			});
 	}
 
@@ -51,17 +48,19 @@ export default class ResourcesController {
 				this.$state.formData = {};
 				this.$state.resourceList = response.data;
 			}.bind(this), function errorCallback(response) {
-				console.log(response)
+				this.$state.statusMessage = 'Error occured'
 		});
 	}
 
 	editResource() {
+		this.$state.statusMessage = 'Please Wait...'
 		return this.$http.put("/api/resources/" + this.$state.resourceId, this.$state.formData)
 			.then(function successCallback(response) {
+				this.toggleEdit();
 				this.$state.formData = {};
 				this.$state.resourceList = response.data;
 			}.bind(this), function errorCallback(response) {
-				console.log(response)
+				this.$state.statusMessage = 'Error occured'
 			});
 	}
 }

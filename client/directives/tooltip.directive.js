@@ -3,16 +3,24 @@ import angular from 'angular';
 function tooltip() {
   return {
     restrict: 'E',
-    template: "<i id='toggle' class='fa fa-chevron-down tooltip-toggle' aria-hidden='true'></i><div id='tooltip' class='tooltip bottom'><div class='tooltip-arrow'></div><div class='tooltip-inner'><p ng-click='resources.toggleEdit(this.item._id, this.item.type, this.item.title, this.item.resource)'>Edit</p><p ng-click='resources.toggleDelete(this.item._id)'>Delete</p></div></div>",
-    link: function ($scope, element, attrs) {
-        element.on('click', function (e) {
-            if (e.target.id === 'toggle') {
-                if (element[0].lastChild.classList.contains('show')) {
-                    return element[0].lastChild.classList.remove('show')
-                }
-                return element[0].lastChild.classList.add('show')
-            }
-        });
+    template: "<i ng-click=\"toggleToolTip()\" id='toggle' class='fa fa-chevron-down tooltip-toggle' aria-hidden='true'></i><div ng-show=\"showMe\" id='tooltip' class='tooltip bottom'><div class='tooltip-arrow'></div><div class='tooltip-inner'><p ng-click=\"toggleEditForm()\">Edit</p><p ng-click=\"toggleDeleteForm()\"'>Delete</p></div></div>",
+    link: function (scope) {
+        scope.toggleToolTip = function () {
+            scope.showMe = !scope.showMe;
+        };
+        scope.toggleDeleteForm = function () {
+            scope.showMe = !scope.showMe;
+            this.$parent.resources.$state.resourceId = this.item._id
+            this.$parent.resources.$state.showDelete = !this.$parent.resources.$state.showDelete
+        }
+        scope.toggleEditForm = function () {
+            this.$parent.resources.$state.resourceId = this.item._id
+            this.$parent.resources.$state.formData.type = this.item.type
+            this.$parent.resources.$state.formData.title = this.item.title
+            this.$parent.resources.$state.formData.resource = this.item.resource
+            scope.showMe = !scope.showMe;
+            this.$parent.resources.$state.showEdit = !this.$parent.resources.$state.showEdit
+        }
     }
   }
 }

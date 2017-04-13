@@ -37,16 +37,11 @@ a {
 	right: -14px;
 	text-align: left;
 	border-radius: 6px;
-  z-index: -1;
+  opacity: 1 !important;
 }
 
 .tooltip-inner p {
   cursor: pointer;
-}
-
-.show {
-  opacity: 1;
-  z-index: 11;
 }
 
 .close {
