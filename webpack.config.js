@@ -84,8 +84,7 @@ module.exports = function makeWebpackConfig() {
 		config.plugins.push(
 			// Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
 			// Only emit files when there are no errors
-			new webpack.NoEmitOnErrorsPlugin(),
-
+			new webpack.NoEmitOnErrorsPlugin()
 		)
 	}
 
