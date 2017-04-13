@@ -4,7 +4,7 @@
   "description": "Sample Angular App for Gloo Javascript Developer Position",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "rimraf dist && webpack --bail --progress --profile",
     "start": "nf start --procfile ProcfileDev",
     "client": "webpack-dev-server",
     "server": "PORT=3000 nodemon ./server/index.js",
