@@ -10,7 +10,7 @@ const findResource = (req, res) => {
 }
 const controller = {
     getResources: (req, res) => {
-        findResource(req, res)
+        return findResource(req, res)
     },
     createResource: (req, res) => {
         resource.create({
@@ -21,18 +21,33 @@ const controller = {
             if (err) {
                 return res.send(err);
             }
-            findResource(req, res)
+            return findResource(req, res)
         });
     },
     deleteResource: (req, res) => {
         resource.remove({
             _id : req.params.id
         }, (err, resource) => {
-            if (err)
-                res.send(err);
-            findResource(req, res)
+            if (err) {
+                return res.send(err);
+            }
+            return findResource(req, res)
+        })
+    },
+    editResource: (req, res) => {
+        resource.update({
+            _id : req.params.id,
+            type : req.body.type,
+            title: req.body.title,
+            resource: req.body.resource
+        }, function (err, resource) {
+            if(err) {
+                return res.send(err);
+            }
+            return findResource(req, res)
         })
     }
+
 }
 
 module.exports = controller

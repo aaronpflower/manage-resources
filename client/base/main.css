@@ -2,12 +2,51 @@ body {
   background-color: #f5f8fa;
 }
 
+td {
+  position: relative;
+}
+
+a {
+  color: #222;
+  cursor: pointer;
+}
+
 .add-resource {
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid #e6ecf0;
   padding: 2em;
   position: relative;
+}
+
+.tooltip-toggle {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal {
+  display: block;
+}
+
+.tooltip {
+	position: absolute;
+	top: 20px;
+	right: -14px;
+	text-align: left;
+	border-radius: 6px;
+  z-index: -1;
+}
+
+.tooltip-inner p {
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1;
+  z-index: 11;
 }
 
 .close {
@@ -26,5 +65,5 @@ body {
 
 .animate-show-hide.ng-hide-add,
 .animate-show-hide.ng-hide-remove {
-  transition: all linear 0.5s;
+  transition: all ease 0.3s;
 }
