@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.MONGODB_URI)
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({'extended':'true'}));
