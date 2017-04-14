@@ -19,8 +19,10 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'client'],
-        extension: ['', '.js']
+		modules: [
+			'node_modules',
+			path.resolve(__dirname, 'client'),
+		]
     },
     plugins: [
 		HTMLWebpackPluginConfig
