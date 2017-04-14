@@ -33907,7 +33907,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: #e9ebee;\n}\n\na {\n  color: #222;\n  cursor: pointer;\n}\n\n.container {\n  max-width: 890px;\n}\n\n.resource-item {\n  position: relative;\n  padding: .5em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n  background-color: #fff;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);\n}\n\n.add-resource {\n  background-color: #fff;\n  border-radius: 6px;\n  border: 1px solid #e6ecf0;\n  padding: 2em;\n  position: relative;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);\n}\n\n.tooltip-toggle {\n  position: absolute;\n  top: .5em;\n  right: .5em;\n  cursor: pointer;\n  z-index: 10;\n  opacity: .2;\n  transition: all .1s ease;\n}\n\n.tooltip-toggle:hover {\n  opacity: .5;\n}\n\n.modal {\n  display: block;\n}\n\n.tooltip {\n\tposition: absolute;\n\ttop: 20px;\n\tright: -11px;\n\ttext-align: left;\n\tborder-radius: 6px;\n  opacity: 1 !important;\n}\n\n.tooltip-inner p {\n  cursor: pointer;\n}\n\n.close {\n  position: absolute;\n  top: 5px;\n  left: 5px;\n}\n\n.navbar {\n    border-radius: 0px;\n}\n\n.animate-show-hide.ng-hide {\n  opacity: 0;\n}\n\n.animate-show-hide.ng-hide-add,\n.animate-show-hide.ng-hide-remove {\n  transition: all ease 0.3s;\n}\n", ""]);
+	exports.push([module.id, "body {\n\tbackground-color: #e9ebee;\n}\n\na {\n\tcolor: #222;\n\tcursor: pointer;\n}\n\n.container {\n\tmax-width: 890px;\n}\n\n.modal {\n\tbackground-color: rgba(130, 130, 130, 0.7);\n}\n\n.resource-item {\n\tposition: relative;\n\tpadding: .5em;\n\tmargin-bottom: 1em;\n\tborder-radius: 6px;\n\tbackground-color: #fff;\n\tbox-shadow: 0 5px 15px rgba(0, 0, 0, .2);\n}\n\n.add-resource {\n\tbackground-color: #fff;\n\tborder-radius: 6px;\n\tborder: 1px solid #e6ecf0;\n\tpadding: 2em;\n\tposition: relative;\n\tbox-shadow: 0 5px 15px rgba(0, 0, 0, .2);\n}\n\n.tooltip-toggle {\n\tposition: absolute;\n\ttop: .5em;\n\tright: .5em;\n\tcursor: pointer;\n\tz-index: 10;\n\topacity: .2;\n\ttransition: all .1s ease;\n}\n\n.tooltip-toggle:hover {\n\topacity: .5;\n}\n\n.modal {\n\tdisplay: block;\n}\n\n.tooltip {\n\tposition: absolute;\n\ttop: 20px;\n\tright: -11px;\n\ttext-align: left;\n\tborder-radius: 6px;\n\topacity: 1 !important;\n}\n\n.tooltip-inner p {\n\tcursor: pointer;\n}\n\n.close {\n\tposition: absolute;\n\ttop: 5px;\n\tleft: 5px;\n}\n\n.navbar {\n\tborder-radius: 0px;\n}\n\n.animate-show-hide.ng-hide {\n\topacity: 0;\n}\n\n.animate-show-hide.ng-hide-add,\n.animate-show-hide.ng-hide-remove {\n\ttransition: all ease 0.3s;\n}\n", ""]);
 
 	// exports
 
@@ -42777,17 +42777,17 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	exports.default = routing;
 	routing.$inject = ['$urlRouterProvider', '$locationProvider'];
 
 	function routing($urlRouterProvider, $locationProvider) {
-	  $locationProvider.html5Mode({
-	    enabled: true,
-	    requireBase: false
-	  });
-	  $urlRouterProvider.otherwise('/');
+		$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});
+		$urlRouterProvider.otherwise('/');
 	}
 
 /***/ }),
@@ -42797,7 +42797,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	__webpack_require__(14);
@@ -42847,7 +42847,7 @@
 /* 22 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"col-xs-12\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 text-center\">\n\t\t\t\t<h3>Manage Your Favorite Resources In One Spot</h3>\n\t\t\t\t<p class=\"lead\">Lorem ipsum dolor sit amet, nec no quem rebum volumus, nec detracto argumentum vituperatoribus eu. Vocent meliore lobortis ex cum, everti sensibus te duo. Nec tale noster placerat in, vim alia epicuri blandit ad. Pri luptatum disputando at, id option aperiri persequeris nec, in iriure comprehensam per.</p>\n\t\t\t\t<a ui-sref=\"resources\" class=\"btn btn-primary\">Get Started</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n"
+	module.exports = "<div class=\"col-xs-12\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 text-center\">\n\t\t\t\t<h3>Manage Your Favorite Resources In One Spot!</h3>\n\t\t\t\t<a ui-sref=\"resources\" class=\"btn btn-primary\">Get Started</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n"
 
 /***/ }),
 /* 23 */
@@ -42856,15 +42856,15 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var HomeController = function HomeController($scope, $state) {
-	  _classCallCheck(this, HomeController);
+		_classCallCheck(this, HomeController);
 
-	  this.$state = $state;
+		this.$state = $state;
 	};
 
 	exports.default = HomeController;
@@ -42876,7 +42876,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 
 	__webpack_require__(14);
@@ -42924,21 +42924,13 @@
 	        controller: 'ResourcesController',
 	        controllerAs: 'resources'
 	    });
-	    // .state('resources.add', {
-	    //     url: '#add',
-	    //     views: {
-	    //         '': { 
-	    //             template: require('./partial-about.html') 
-	    //         }
-	    //     }
-	    // })
 	}
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div ng-init=\"resources.getResources()\" class=\"col-xs-12\">\n    <div class=\"container\">\n        <div class=\"add-resource col-xs-12 animate-show-hide\" ng-show=\"resources.$state.showForm\">\n            <i ng-click=\"resources.toggleForm()\" class=\"fa fa-times close\" aria-hidden=\"true\"></i>\n            <div class=\"row\">\n                <div class=\"col-xs-6\">\n                    <p>Add for favorite resources</p>\n                </div>\n                <form class=\"col-xs-6 form\" name=\"resourceForm\" ng-submit=\"resources.addResource(resourceForm.$valid)\" novalidate>\n                    <div class=\"form-group\">\n                        <label for=\"type\">Type of Resource</label>\n                        <input name=\"type\" required type=\"text\" class=\"form-control\" id=\"type\" placeholder=\"Type of resource\" ng-model=\"resources.$state.formData.type\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"title\">Resource Title</label>\n                        <input name=\"title\" required type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"title\" ng-model=\"resources.$state.formData.title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"resource\">Resource</label>\n                        <input name=\"resource\" required id=\"resource\" type=\"text\" class=\"form-control\" placeholder=\"Resource\" ng-model=\"resources.$state.formData.resource\">\n                    </div>\n                    <p>{{this.$state.statusMessage}}</p>\n                    <button ng-disabled=\"resourceForm.$invalid\" type=\"submit\" class=\"btn btn-primary\" >Add Resource</button>\n                </form>\n            </div>\n        </div>\n\n        <div class=\"modal animate-show-hide\" role=\"dialog\" ng-show=\"resources.$state.showEdit\">\n            <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <button type=\"button\" class=\"close\" ng-click=\"resources.toggleEdit()\">&times;</button>\n                        <h4 class=\"modal-title\">Edit Resource</h4>\n                        </div>\n                    <div class=\"modal-body\">\n                        <form class=\"form\">\n                            <div class=\"form-group\">\n                                <label for=\"type\">Type of Resource</label>\n                                <input type=\"text\" class=\"form-control\" id=\"type\" placeholder=\"Type of resource\" ng-model=\"resources.$state.formData.type\">\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"title\">Resource Title</label>\n                                <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"title\" ng-model=\"resources.$state.formData.title\">\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"title\">Resource</label>\n                                <input id=\"title\" type=\"text\" class=\"form-control\" placeholder=\"Resource\" ng-model=\"resources.$state.formData.resource\">\n                            </div>\n                        </form>\n                    </div>\n                    <div class=\"modal-footer\">\n                        <p>{{this.$state.statusMessage}}</p>\n                        <button type=\"button\" class=\"btn btn-default\" ng-click=\"resources.toggleEdit()\">Cancel</button>\n                        <button type=\"button\" class=\"btn btn-primary\" ng-click=\"resources.editResource()\">Save</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"modal animate-show-hide\" role=\"dialog\" ng-show=\"resources.$state.showDelete\">\n            <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <button type=\"button\" class=\"close\" ng-click=\"resources.toggleDelete()\">&times;</button>\n                        <h4 class=\"modal-title\">Delete Resource</h4>\n                    </div>\n                    <div class=\"modal-body\">\n                        <p>Are you sure you want to delete this resource?</p>\n                    </div>\n                    <div class=\"modal-footer\">\n                        <p>{{this.$state.statusMessage}}</p>\n                        <button type=\"button\" class=\"btn btn-default\" ng-click=\"resources.toggleDelete()\">Cancel</button>\n                        <button type=\"button\" class=\"btn btn-danger\" ng-click=\"resources.deleteResources()\">Delete</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-sm-3\">\n            <div class=\"row\">\n                <h2>Tool Box</h2>\n                <button class=\"btn btn-primary\" ng-click=\"resources.toggleForm()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i> Add Resource</button>\n            </div>\n        </div>\n        \n\n        <div class=\"resource-list col-sm-9\">\n            <h2>Resources</h2>\n            <div class=\"resource-item row\" ng-repeat=\"item in resources.$state.resourceList track by $index\">\n                <tooltip></tooltip>\n                <div class=\"modal-header\">\n                    <h4 class=\"col-xs-12\">Category: {{item.type}}</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <p class=\"col-xs-12\">Title: {{item.title}}</p>\n                    <p class=\"col-xs-12\">Description: {{item.resource}}</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>   "
+	module.exports = "<div ng-init=\"resources.getResources()\" class=\"col-xs-12\">\n    <div class=\"container\">\n        <div class=\"add-resource col-xs-12 animate-show-hide\" ng-show=\"resources.$state.showForm\">\n            <i ng-click=\"resources.toggleForm()\" class=\"fa fa-times close\" aria-hidden=\"true\"></i>\n            <div class=\"row\">\n                <div class=\"col-xs-6\">\n                    <p>Add for favorite resources</p>\n                </div>\n                <form class=\"col-xs-6 form\" name=\"resourceForm\" ng-submit=\"resources.addResource(resourceForm.$valid)\" novalidate>\n                    <div class=\"form-group\">\n                        <label for=\"type\">Type of Resource</label>\n                        <input name=\"type\" required type=\"text\" class=\"form-control\" id=\"type\" placeholder=\"Type of resource\" ng-model=\"resources.$state.formData.type\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"title\">Resource Title</label>\n                        <input name=\"title\" required type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"title\" ng-model=\"resources.$state.formData.title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"resource\">Resource</label>\n                        <input name=\"resource\" required id=\"resource\" type=\"text\" class=\"form-control\" placeholder=\"Resource\" ng-model=\"resources.$state.formData.resource\">\n                    </div>\n                    <p>{{this.$state.statusMessage}}</p>\n                    <button ng-disabled=\"resourceForm.$invalid\" type=\"submit\" class=\"btn btn-primary\" >Add Resource</button>\n                </form>\n            </div>\n        </div>\n\n        <div class=\"modal animate-show-hide\" role=\"dialog\" ng-show=\"resources.$state.showEdit\">\n            <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <button type=\"button\" class=\"close\" ng-click=\"resources.toggleEdit()\">&times;</button>\n                        <h4 class=\"modal-title\">Edit Resource</h4>\n                        </div>\n                    <div class=\"modal-body\">\n                        <form class=\"form\">\n                            <div class=\"form-group\">\n                                <label for=\"type\">Type of Resource</label>\n                                <input type=\"text\" class=\"form-control\" id=\"type\" placeholder=\"Type of resource\" ng-model=\"resources.$state.formData.type\">\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"title\">Resource Title</label>\n                                <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"title\" ng-model=\"resources.$state.formData.title\">\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"title\">Resource</label>\n                                <input id=\"title\" type=\"text\" class=\"form-control\" placeholder=\"Resource\" ng-model=\"resources.$state.formData.resource\">\n                            </div>\n                        </form>\n                    </div>\n                    <div class=\"modal-footer\">\n                        <p>{{this.$state.statusMessage}}</p>\n                        <button type=\"button\" class=\"btn btn-default\" ng-click=\"resources.toggleEdit()\">Cancel</button>\n                        <button type=\"button\" class=\"btn btn-primary\" ng-click=\"resources.editResource()\">Save</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"modal animate-show-hide\" role=\"dialog\" ng-show=\"resources.$state.showDelete\">\n            <div class=\"modal-dialog\">\n                <div class=\"modal-content\">\n                    <div class=\"modal-header\">\n                        <button type=\"button\" class=\"close\" ng-click=\"resources.toggleDelete()\">&times;</button>\n                        <h4 class=\"modal-title\">Delete Resource</h4>\n                    </div>\n                    <div class=\"modal-body\">\n                        <p>Are you sure you want to delete this resource?</p>\n                    </div>\n                    <div class=\"modal-footer\">\n                        <p>{{this.$state.statusMessage}}</p>\n                        <button type=\"button\" class=\"btn btn-default\" ng-click=\"resources.toggleDelete()\">Cancel</button>\n                        <button type=\"button\" class=\"btn btn-danger\" ng-click=\"resources.deleteResources()\">Delete</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-sm-3\">\n            <div class=\"row\">\n                <h2>Tool Box</h2>\n                <button class=\"btn btn-primary\" ng-click=\"resources.toggleForm()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i> Add Resource</button>\n            </div>\n        </div>\n        \n\n        <div class=\"resource-list col-sm-9\">\n            <h2>Resources</h2>\n            <div class=\"resource-item row\" ng-repeat=\"item in resources.$state.resourceList track by $index\">\n                <tooltip index='item._id' items=\"resources.$state.resrouceToolTip\"></tooltip>\n                <div class=\"modal-header\">\n                    <h4 class=\"col-xs-12\">Category: {{item.type}}</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <p class=\"col-xs-12\">Title: {{item.title}}</p>\n                    <p class=\"col-xs-12\">Description: {{item.resource}}</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>   "
 
 /***/ }),
 /* 27 */
@@ -42965,26 +42957,51 @@
 			this.$state.showDelete = false;
 			this.$state.formData = {};
 			this.$state.resourceList = [];
-			this.$state.resourceId = null;
 			this.$state.statusMessage = null;
-			console.log(this);
+			this.toggleEdit = this.toggleEdit.bind(this);
+			this.toggleDelete = this.toggleDelete.bind(this);
+			this.$state.currentResource = {};
+			this.$state.resrouceToolTip = [{
+				name: 'Edit',
+				link: function link(index, context) {
+					context.$parent.showToolTip = false;
+					$scope.resources.setCurrentResource(index);
+					$scope.resources.toggleEdit();
+				}
+			}, {
+				name: 'Delete',
+				link: function link(index, context) {
+					context.$parent.showToolTip = false;
+					$scope.resources.setCurrentResource(index);
+					$scope.resources.toggleDelete();
+				}
+			}];
 		}
 
 		_createClass(ResourcesController, [{
+			key: 'setCurrentResource',
+			value: function setCurrentResource(index) {
+				var current = this.$state.resourceList.filter(function (item, i) {
+					return item._id === index;
+				});
+				this.$state.currentResource = current[0];
+				return this.$state.currentResource;
+			}
+		}, {
 			key: 'toggleForm',
 			value: function toggleForm() {
 				return this.$state.showForm = !this.$state.showForm;
 			}
 		}, {
 			key: 'toggleEdit',
-			value: function toggleEdit(id, type, title, resource) {
-				this.$state.formData = {};
+			value: function toggleEdit() {
+				this.$state.formData = this.$state.currentResource;
 				return this.$state.showEdit = !this.$state.showEdit;
 			}
 		}, {
 			key: 'toggleDelete',
-			value: function toggleDelete(id) {
-				this.$state.formData = {};
+			value: function toggleDelete() {
+				console.log(this);
 				this.$state.showDelete = !this.$state.showDelete;
 			}
 		}, {
@@ -42999,7 +43016,7 @@
 		}, {
 			key: 'deleteResources',
 			value: function deleteResources() {
-				return this.$http.delete('/api/resources/' + this.$state.resourceId).then(function successCallback(response) {
+				return this.$http.delete('/api/resources/' + this.$state.currentResource._id).then(function successCallback(response) {
 					this.toggleDelete();
 					this.$state.resourceList = response.data;
 				}.bind(this), function errorCallback(response) {
@@ -43020,7 +43037,7 @@
 			key: 'editResource',
 			value: function editResource() {
 				this.$state.statusMessage = 'Please Wait...';
-				return this.$http.put("/api/resources/" + this.$state.resourceId, this.$state.formData).then(function successCallback(response) {
+				return this.$http.put("/api/resources/" + this.$state.currentResource._id, this.$state.formData).then(function successCallback(response) {
 					this.toggleEdit();
 					this.$state.formData = {};
 					this.$state.resourceList = response.data;
@@ -43053,30 +43070,28 @@
 
 	function tooltip() {
 	    return {
-	        restrict: 'E',
-	        template: "<i ng-click=\"toggleToolTip()\" id='toggle' class='fa fa-chevron-down tooltip-toggle' aria-hidden='true'></i><div ng-show=\"showMe\" id='tooltip' class='tooltip bottom'><div class='tooltip-arrow'></div><div class='tooltip-inner'><p ng-click=\"toggleEditForm()\">Edit</p><p ng-click=\"toggleDeleteForm()\"'>Delete</p></div></div>",
+	        restrict: 'EA',
+	        transclude: false,
+	        scope: {
+	            items: '=',
+	            index: '='
+	        },
+	        template: __webpack_require__(29),
 	        link: function link(scope) {
 	            scope.toggleToolTip = function () {
-	                scope.showMe = !scope.showMe;
-	            };
-	            scope.toggleDeleteForm = function () {
-	                scope.showMe = !scope.showMe;
-	                this.$parent.resources.$state.resourceId = this.item._id;
-	                this.$parent.resources.$state.showDelete = !this.$parent.resources.$state.showDelete;
-	            };
-	            scope.toggleEditForm = function () {
-	                this.$parent.resources.$state.resourceId = this.item._id;
-	                this.$parent.resources.$state.formData.type = this.item.type;
-	                this.$parent.resources.$state.formData.title = this.item.title;
-	                this.$parent.resources.$state.formData.resource = this.item.resource;
-	                scope.showMe = !scope.showMe;
-	                this.$parent.resources.$state.showEdit = !this.$parent.resources.$state.showEdit;
+	                scope.showToolTip = !scope.showToolTip;
 	            };
 	        }
 	    };
 	}
 
 	exports.default = _angular2.default.module('directives.tooltip', []).directive('tooltip', tooltip).name;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+	module.exports = "<i ng-click=\"toggleToolTip()\" id='toggle' class='fa fa-chevron-down tooltip-toggle' aria-hidden='true'></i>\n<div ng-show=\"showToolTip\" class='tooltip bottom'>\n    <div class='tooltip-arrow'></div>\n    <div class='tooltip-inner'>\n        <div ng-repeat=\"item in items track by $index\">\n            <p ng-click=\"item.link(index, this)\">{{item.name}}</p>\n        </div>\n    </div>\n</div>"
 
 /***/ })
 /******/ ]);
