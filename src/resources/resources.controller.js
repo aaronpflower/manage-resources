@@ -7,36 +7,48 @@ export default class ResourcesController {
 		this.$state.showDelete = false;
 		this.$state.formData = {};
 		this.$state.resourceList = [];
-		this.$state.resourceId = null;
 		this.$state.statusMessage = null;
-		this.toggleEdit = this.toggleEdit.bind(this)
-		this.toggleDelete = this.toggleDelete.bind(this)
+		this.toggleEdit = this.toggleEdit.bind(this);
+		this.toggleDelete = this.toggleDelete.bind(this);
+		this.$state.currentResource = {};
 		this.$state.resrouceToolTip = [
 			{
 				name: 'Edit',
-				link: function () {
+				link: function (index, context) {
+					context.$parent.showToolTip = false;
+					$scope.resources.setCurrentResource(index)
 					$scope.resources.toggleEdit()
 				}
 			}, {
 				name: 'Delete',
-				link: function() {
+				link: function(index, context) {
+					context.$parent.showToolTip = false;
+					$scope.resources.setCurrentResource(index)
 					$scope.resources.toggleDelete()
 				}
 			}
 		]
 	}
 
+	setCurrentResource(index) {
+		let current = this.$state.resourceList.filter((item, i) => {
+			return item._id === index;
+		})
+		this.$state.currentResource = current[0];
+		return this.$state.currentResource;
+	}
+
 	toggleForm() {
 		return this.$state.showForm = !this.$state.showForm;
 	}
 
-	toggleEdit(id, type, title, resource) {
-		this.$state.formData = {};
+	toggleEdit() {
+		this.$state.formData = this.$state.currentResource;
 		return this.$state.showEdit = !this.$state.showEdit;
 	}
 
-	toggleDelete(id) {
-		this.$state.formData = {};
+	toggleDelete() {
+		console.log(this)
 		this.$state.showDelete = !this.$state.showDelete;
 	}
 
@@ -50,7 +62,7 @@ export default class ResourcesController {
 	}
 
 	deleteResources() {
-		return this.$http.delete('/api/resources/' + this.$state.resourceId)
+		return this.$http.delete('/api/resources/' + this.$state.currentResource._id)
 			.then(function successCallback(response) {
 				this.toggleDelete()
 				this.$state.resourceList = response.data;
@@ -71,7 +83,7 @@ export default class ResourcesController {
 
 	editResource() {
 		this.$state.statusMessage = 'Please Wait...'
-		return this.$http.put("/api/resources/" + this.$state.resourceId, this.$state.formData)
+		return this.$http.put("/api/resources/" + this.$state.currentResource._id, this.$state.formData)
 			.then(function successCallback(response) {
 				this.toggleEdit();
 				this.$state.formData = {};

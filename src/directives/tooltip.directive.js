@@ -5,12 +5,13 @@ function tooltip() {
     restrict : 'EA',
     transclude : false,
     scope: {
-        items: '='
+        items: '=',
+        index: '='
     },
     template: require('./tooltip.html'),
     link: function (scope) {
         scope.toggleToolTip = function () {
-            scope.showMe = !scope.showMe;
+            scope.showToolTip = !scope.showToolTip;
         };
     }
   }
