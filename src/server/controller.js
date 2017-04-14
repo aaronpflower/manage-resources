@@ -36,7 +36,6 @@ const controller = {
     },
     editResource: (req, res) => {
         resource.update({
-            _id : req.params.id,
             type : req.body.type,
             title: req.body.title,
             resource: req.body.resource
