@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/main.css';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';

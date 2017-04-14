@@ -30,7 +30,7 @@ module.exports = {
         },
         {
 			test: /\.css$/,
-			loader: 'style-loader!css-loader?modules'
+			loader: 'style-loader!css-loader'
 		},
         {
             test: /\.(woff2?|ttf|eot|svg)$/,
