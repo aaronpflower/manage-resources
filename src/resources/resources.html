@@ -87,7 +87,7 @@
         <div class="resource-list col-sm-9">
             <h2>Resources</h2>
             <div class="resource-item row" ng-repeat="item in resources.$state.resourceList track by $index">
-                <tooltip></tooltip>
+                <tooltip items="resources.$state.resrouceToolTip"></tooltip>
                 <div class="modal-header">
                     <h4 class="col-xs-12">Category: {{item.type}}</h4>
                 </div>

@@ -9,7 +9,21 @@ export default class ResourcesController {
 		this.$state.resourceList = [];
 		this.$state.resourceId = null;
 		this.$state.statusMessage = null;
-		console.log(this)
+		this.toggleEdit = this.toggleEdit.bind(this)
+		this.toggleDelete = this.toggleDelete.bind(this)
+		this.$state.resrouceToolTip = [
+			{
+				name: 'Edit',
+				link: function () {
+					$scope.resources.toggleEdit()
+				}
+			}, {
+				name: 'Delete',
+				link: function() {
+					$scope.resources.toggleDelete()
+				}
+			}
+		]
 	}
 
 	toggleForm() {

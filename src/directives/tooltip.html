@@ -1,0 +1,9 @@
+<i ng-click="toggleToolTip()" id='toggle' class='fa fa-chevron-down tooltip-toggle' aria-hidden='true'></i>
+<div ng-show="showMe" class='tooltip bottom'>
+    <div class='tooltip-arrow'></div>
+    <div class='tooltip-inner'>
+        <div ng-repeat="item in items">
+            <p ng-click="item.link()">{{item.name}}</p>
+        </div>
+    </div>
+</div>
