@@ -3,7 +3,6 @@ var path = require('path');
 
 module.exports = {
     entry: [
-        'bootstrap-loader',
         './src'
     ],
     output: {
@@ -35,10 +34,6 @@ module.exports = {
         {
             test: /\.(woff2?|ttf|eot|svg)$/,
             loader: 'url?limit=10000'
-        },
-        {
-            test: /bootstrap-sass\/assets\/javascripts\//,
-            loader: 'imports?jQuery=jquery'
         }
         ]
     }
