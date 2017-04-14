@@ -43001,7 +43001,6 @@
 		}, {
 			key: 'toggleDelete',
 			value: function toggleDelete() {
-				console.log(this);
 				this.$state.showDelete = !this.$state.showDelete;
 			}
 		}, {
@@ -43036,12 +43035,14 @@
 		}, {
 			key: 'editResource',
 			value: function editResource() {
-				this.$state.statusMessage = 'Please Wait...';
-				return this.$http.put("/api/resources/" + this.$state.currentResource._id, this.$state.formData).then(function successCallback(response) {
+				var data = { type: this.$state.formData.type, title: this.$state.formData.title, resource: this.$state.formData.resource };
+				return this.$http.put("/api/resources/" + this.$state.currentResource._id, data).then(function successCallback(response) {
+					console.log(response);
 					this.toggleEdit();
 					this.$state.formData = {};
 					this.$state.resourceList = response.data;
 				}.bind(this), function errorCallback(response) {
+					console.log(response);
 					this.$state.statusMessage = 'Error occured';
 				});
 			}
