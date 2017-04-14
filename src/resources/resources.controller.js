@@ -34,7 +34,7 @@ export default class ResourcesController {
 		let current = this.$state.resourceList.filter((item, i) => {
 			return item._id === index;
 		})
-		this.$state.currentResource = current[0];
+		this.$state.currentResource = Object.assign({}, current[0]);
 		return this.$state.currentResource;
 	}
 
@@ -84,12 +84,10 @@ export default class ResourcesController {
 		let data = {type: this.$state.formData.type, title: this.$state.formData.title, resource: this.$state.formData.resource}
 		return this.$http.put("/api/resources/" + this.$state.currentResource._id, data)
 			.then(function successCallback(response) {
-				console.log(response)
 				this.toggleEdit();
 				this.$state.formData = {};
 				this.$state.resourceList = response.data;
 			}.bind(this), function errorCallback(response) {
-				console.log(response)
 				this.$state.statusMessage = 'Error occured'
 			});
 	}
