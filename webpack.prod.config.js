@@ -1,6 +1,14 @@
 var webpack = require('webpack');
 var path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: __dirname + '/client/index.html',
+    filename: 'index.html',
+    inject: 'body'
+})
+
 module.exports = {
     entry: [
         'bootstrap-loader',
@@ -14,6 +22,9 @@ module.exports = {
         modulesDirectories: ['node_modules', 'client'],
         extension: ['', '.js']
     },
+    plugins: [
+		HTMLWebpackPluginConfig
+    ],
     module: {
         loaders: [
         {
