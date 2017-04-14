@@ -42995,7 +42995,6 @@
 		}, {
 			key: 'toggleEdit',
 			value: function toggleEdit() {
-				this.$state.formData = this.$state.currentResource;
 				return this.$state.showEdit = !this.$state.showEdit;
 			}
 		}, {
