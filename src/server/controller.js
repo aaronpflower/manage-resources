@@ -1,4 +1,4 @@
-const resource = require('./model')
+const resource = require('./db').Resource;
 
 const findResource = (req, res) => {
      resource.find((err, resources) => {

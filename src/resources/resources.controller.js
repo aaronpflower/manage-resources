@@ -9,6 +9,7 @@ export default class ResourcesController {
 		this.$state.resourceList = [];
 		this.$state.resourceId = null;
 		this.$state.statusMessage = null;
+		console.log(this)
 	}
 
 	toggleForm() {

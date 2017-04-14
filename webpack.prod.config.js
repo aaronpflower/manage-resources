@@ -1,32 +1,19 @@
 var webpack = require('webpack');
 var path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: __dirname + '/client/index.html',
-    filename: 'index.html',
-    inject: 'body'
-})
-
 module.exports = {
     entry: [
         'bootstrap-loader',
-        './client/app.js'
+        './src'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     resolve: {
-		modules: [
-			'node_modules',
-			path.resolve(__dirname, 'client'),
-		]
+        modulesDirectories: ['node_modules', 'src'],
+        extension: ['', '.js']
     },
-    plugins: [
-		HTMLWebpackPluginConfig
-    ],
     module: {
         loaders: [
         {

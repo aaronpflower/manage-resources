@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+mongoose.connect(process.env.MONGODB_URI)
 
 const Resource = mongoose.model('Resource', {
     type : {type: String, default: ''},
@@ -6,4 +7,4 @@ const Resource = mongoose.model('Resource', {
     resource : {type: String, default: ''}
 });
 
-module.exports = Resource
+module.exports.Resource = Resource;
