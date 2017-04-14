@@ -11,6 +11,10 @@ a {
 	max-width: 890px;
 }
 
+.modal {
+	background-color: rgba(130, 130, 130, 0.7);
+}
+
 .resource-item {
 	position: relative;
 	padding: .5em;

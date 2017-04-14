@@ -1,14 +1,16 @@
 require('dotenv').config()
 
-var express = require('express');
-var app = express();
-var path = require('path');
-var bodyParser = require('body-parser');
-var routes = require('server/routes');
+const express = require('express');
+const app = express();
+const path = require('path');
+const bodyParser = require('body-parser');
+const routes = require('server/routes');
+const helmet = require('helmet')
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(helmet())
 
 // Used for production build
 app.use(express.static(path.join(__dirname, 'public')));
