@@ -2,19 +2,24 @@ require('dotenv').config()
 
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+const path = require('path');
 const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
+const mongoose = require('mongoose');
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI)
 
-app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({'extended':'true'}));
-app.use(bodyParser.json())
-app.use(bodyParser.json({type: 'application/vnd.api+json'}))
-app.use(methodOverride());
+app.use(bodyParser.json());
+
+// Used for production build
+app.use(express.static(path.join(__dirname, 'client')));
 
 require('./routes')(app)
 
-app.listen(3000);
-console.log("app listening on port 3000")
+// app.all('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname, '../client/index.html'));
+// });
+
+app.listen(PORT, function() {
+    console.log('Server running on ' + PORT);
+});
