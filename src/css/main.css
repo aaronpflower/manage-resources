@@ -1,50 +1,50 @@
 body {
-  background-color: #e9ebee;
+	background-color: #e9ebee;
 }
 
 a {
-  color: #222;
-  cursor: pointer;
+	color: #222;
+	cursor: pointer;
 }
 
 .container {
-  max-width: 890px;
+	max-width: 890px;
 }
 
 .resource-item {
-  position: relative;
-  padding: .5em;
-  margin-bottom: 1em;
-  border-radius: 6px;
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+	position: relative;
+	padding: .5em;
+	margin-bottom: 1em;
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
 .add-resource {
-  background-color: #fff;
-  border-radius: 6px;
-  border: 1px solid #e6ecf0;
-  padding: 2em;
-  position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+	background-color: #fff;
+	border-radius: 6px;
+	border: 1px solid #e6ecf0;
+	padding: 2em;
+	position: relative;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
 .tooltip-toggle {
-  position: absolute;
-  top: .5em;
-  right: .5em;
-  cursor: pointer;
-  z-index: 10;
-  opacity: .2;
-  transition: all .1s ease;
+	position: absolute;
+	top: .5em;
+	right: .5em;
+	cursor: pointer;
+	z-index: 10;
+	opacity: .2;
+	transition: all .1s ease;
 }
 
 .tooltip-toggle:hover {
-  opacity: .5;
+	opacity: .5;
 }
 
 .modal {
-  display: block;
+	display: block;
 }
 
 .tooltip {
@@ -53,28 +53,28 @@ a {
 	right: -11px;
 	text-align: left;
 	border-radius: 6px;
-  opacity: 1 !important;
+	opacity: 1 !important;
 }
 
 .tooltip-inner p {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .close {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
 
 .navbar {
-    border-radius: 0px;
+	border-radius: 0px;
 }
 
 .animate-show-hide.ng-hide {
-  opacity: 0;
+	opacity: 0;
 }
 
 .animate-show-hide.ng-hide-add,
 .animate-show-hide.ng-hide-remove {
-  transition: all ease 0.3s;
+	transition: all ease 0.3s;
 }

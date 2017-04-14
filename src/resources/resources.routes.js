@@ -8,12 +8,4 @@ export default function routes($stateProvider) {
         controller: 'ResourcesController',
         controllerAs: 'resources'
     })
-    // .state('resources.add', {
-    //     url: '#add',
-    //     views: {
-    //         '': { 
-    //             template: require('./partial-about.html') 
-    //         }
-    //     }
-    // })
 }

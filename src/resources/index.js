@@ -7,6 +7,6 @@ import ResourcesController from './resources.controller';
 import tooltip from '../directives/tooltip.directive';
 
 export default angular.module('app.resources', [uirouter, tooltip])
-  .config(routing)
-  .controller('ResourcesController', ResourcesController)
-  .name;
+	.config(routing)
+	.controller('ResourcesController', ResourcesController)
+	.name;
