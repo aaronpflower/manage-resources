@@ -1,18 +1,17 @@
-Sample Angular App for Gloo Javascript Developer Position
+#Sample Angular App
+>Allows a user to manage their favorite learning resources
 
-Instructions:
-Initialize a git repository
-Create a boilerplate Angular app (v1.x)
-Add code that allows a user to manage their favorite learning resources: (websites, books, podcasts, etc.)
-User should be able to add resources
-User should be able to edit resources
-User should be able to remove resources
-Data persistence is optional
-Get as creative as you'd like with the functionality and UI
+>This was a fun challenge to do because as a developer I always enjoy learning new tools and frameworks, such as Angular in this case. I have worked on projects that have ranged from static informative websites using JQuery, vanilla JS, HTML, and CSS (vanilla CSS, Stylus, and LESS). I have also contributed to NodeJS applications using MithrilJS or React combined with Redux for the front end and PostgreSQL and MongoDB for the backend. So as I gain experience I have realized that there isn’t one way to create an web application and each project takes careful consideration of the requirements to pick the right tool for the job.
 
-Rules:
-Use as many 3rd party tools as you'd like
-Add any documentation, questions you had, and thoughts to a README
-Make sure it is hosted somewhere that can be viewed directly from a browser (GitHub Pages, etc.)
-Display the depth of your knowledge, including architecture notes
-Have fun with it!
+## Live App Demo
+https://angular-resource-manager.herokuapp.com/
+
+### Development
+1. Start MongodDB, `mongod`
+2. Start Webpack and Node server, `npm run dev`
+
+### Production/Deployment to Heroku
+
+1. `npm run build`
+3. commit changes
+2. `git push heroku master`
